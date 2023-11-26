@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Заявки на ремонт</title>
+    <title>Доступ отклонен</title>
     <link rel="icon" href="assets/img/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/header.css">
     <link rel="stylesheet" href="assets/styles/nav.css">
-    <link rel="stylesheet" href="assets/styles/table.css">
     <link rel="stylesheet" href="assets/styles/footer.css">
     <script defer type="module" src="assets/scripts/main.js"></script>
 </head>
@@ -44,7 +43,7 @@
                 </p>
                 <button type="button" class="header__cabinet">
                     <p class="cabinet-text">
-                        Выход
+                        Вход
                     </p>
                     <img src="assets/img/personal area.svg" alt="Иконка личного кабинета">
                 </button>
@@ -74,69 +73,12 @@
             </ul>
         </div>
     </nav>
-    <script>
-        if (localStorage.getItem('auth') == "false") {
-            document.location.pathname = "access-denied.html";
-        }
-    </script>
     <main class="main">
-        <h1 class="main__header">
-            Заявки на ремонт
-        </h1>
-        <section class="requests__table">
-            <div class="container header__table-wrapper">
-                <input class="table__search-input" type="text" name="" id="" placeholder="Поиск по номеру"
-                    title="Поиск по номеру заказа">
-                <select class="table__status-select" name="" id="" title="Статусы">
-                    <option value="all">Все статусы</option>
-                    <option value="ready">Готов</option>
-                    <option value="waiting-for-repair">Ожидает ремонта</option>
-                    <option value="waiting-for-spare-parts">Ожидает запчастей</option>
-                </select>
-                <div class="input__date-wrap">
-                    <label class="date-label" for="input">Дата: </label>
-                    <input class="table__search-input" type="date" name="" id="" title="Поиск по дате">
-                </div>
-
-                <button class="search-btn" type="button" title="Найти">Найти</button>
-
-
-            </div>
-            <div class="container table__container">
-                <table class="main__table-body">
-                    <thead class="table__header">
-                        <tr>
-                            <th>№<br>заказа</th>
-                            <th>Дата<br>заказа</th>
-                            <th>ФИО заказчика</th>
-                            <th>Вид техники</th>
-                            <th>Произдведенные работы</th>
-                            <th>Примечание</th>
-                            <th>Статус</th>
-                            <th>Сумма</th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody class="table__body">
-                        <tr class="item">
-                            <td class="id">778610446710</td>
-                            <td class="date">23.23.2023</td>
-                            <td class="name">232</td>
-                            <td class="technique">gsdgs</td>
-                            <td class="work-performed ">lorem20</td>
-                            <td class="note">2323</td>
-                            <td class="status ">28600776</td>
-                            <td class="sum">28600776</td>
-                            <td class="edit-icon"><img src="assets/img/akar-icons_edit.svg"></td>
-                            <td class="delete-icon"><img src="assets/img/ant-design_delete-outlined.svg"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+        <div class="container">
+            <h1 class="access-denied-header">Доступ отклонен</h1>
+            <a class="access-denied-text" href="/index.html">Вернуться на главную</a>
+        </div>
     </main>
-    
 
     <footer class="footer">
         <div class="container footer__container">

@@ -151,12 +151,18 @@
                 <h2 class="form__header">
                     Вход администратора
                 </h2>
-                <input class="form__input mail__input" type="text" name="login" required placeholder="Логин">
-                <input class="form__input password__input" type="password" name="password" required
-                    placeholder="Пароль">
+                <input class="form__input mail__input" type="text" name="login"  placeholder="Логин" id="login">
+                <input class="form__input password__input" type="password" name="password" 
+                    placeholder="Пароль" id="password">
                 <button type="submit" class="form__button">
                     Вход
                 </button>
+                <div class="modal__invalid-login">
+                    <p class="invalid-text invalid-login-text"> Неверный логин</p>
+                </div>
+                <div class="modal__invalid-pass">
+                    <p class="invalid-text invalid-pass-text"> Неверный пароль</p>
+                </div>
             </form>
         </div>
     </section>

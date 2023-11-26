@@ -107,6 +107,7 @@
     font-size: 16px;
     font-weight: bold;
     padding: 15px 0 15px 0;
+    cursor: pointer;
 }
 
 .form__question {
@@ -141,4 +142,20 @@
     position: relative;
     top: 0;
     left: 95%;
+}
+.invalid-text {
+    color: var(--main-white-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(75, 0, 0);
+    border-radius: 20px;
+}
+.modal__invalid-pass {
+    display: none;
+}
+.modal__invalid-login {
+    display: none;
 }

@@ -71,6 +71,7 @@
     display: flex;
     align-items: center;
     gap: 7px;
+    cursor: pointer;
 }
 
 .header__cabinet {
@@ -78,4 +79,26 @@
     justify-content: space-around;
     align-items: center;
     font-family: inherit;
+}
+.cabinet__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.access-denied-header {
+    text-align: center;
+    font-size: 46px;
+    margin: 50px;
+}
+.access-denied-text {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--main-black-color);
+    transition: color .2s;
+}
+.access-denied-text:hover {
+    color: var(--main-second-color);
 }
