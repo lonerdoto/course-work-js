@@ -1,7 +1,7 @@
 export const redirectLogo = () => {
     const logo = document.querySelector('.header__logo-container');
     const changePath = () => {
-        window.location.pathname = "/index.html";
+        window.location.pathname = "/course-work-js/";
     }
     logo.addEventListener('click', changePath)
     if (window.location.pathname.includes("index.html")) {

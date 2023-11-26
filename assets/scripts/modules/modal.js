@@ -7,7 +7,7 @@ export const controlModal = () => {
     const cabinetBtn = document.querySelector('.header__cabinet')
     if (localStorage.getItem('auth') == "true") {
         cabinetBtn.addEventListener('click', () => {
-            document.location.pathname = "/index.html"
+            document.location.pathname = "/course-work-js/"
             localStorage.setItem('auth', "false");
         })
     } else {
@@ -65,7 +65,7 @@ export const auth = () => {
             setTimeout(hideInvalid, 3000);
         }
         if (pass === adminPass && login === adminLogin) {
-            document.location.pathname = "/requests.html"
+            document.location.pathname = "/course-work-js/requests.html"
             localStorage.setItem('auth', 'true')
         }
 
