@@ -1,0 +1,49 @@
+.contacts__container {
+    position: relative;
+}
+
+.contacts__content {
+    position: absolute;
+    top: 30%;
+    background-color: var(--main-white-color);
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 50%;
+    padding-left: 20px;
+}
+
+.contacts__header {
+    color: var(--main-black-color);
+    font-size: 36px;
+    font-weight: bold;
+    padding: 30px 0 20px 0;
+}
+
+.contacts__telephone {
+    color: var(--main-black-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.contacts__schedule {
+    color: var(--main-black-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+
+.contacts__address {
+    color: var(--main-black-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+
+.contacts__mail {
+    color: var(--main-black-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    padding-bottom: 30px;
+    font-weight: bold;
+}

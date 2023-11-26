@@ -1,0 +1,76 @@
+.footer {
+    background-color: var(--main-black-color);
+    width: 100%;
+    flex: 1 1 auto;
+}
+
+.footer__telephone {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer__telephone-text {
+    color: var(--main-white-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.footer__telephone-link {
+    color: var(--main-white-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer__address {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer__address-text {
+    color: var(--main-white-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.footer__address-link {
+    color: var(--main-white-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer__mail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer__mail-text {
+    color: var(--main-white-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.footer__mail-link {
+    color: var(--main-white-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer__company {
+    color: var(--main-white-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 20px 0 20px 0;
+
+}
+
+.footer__contacts {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,53 @@
+:root {
+    --main-first-color: #F6AA3F;
+    --main-second-color: #D97C3D;
+    --main-black-color: #2A2A2A;
+    --main-white-color: #F1F1F1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+button,
+select,
+input,
+textarea {
+    font-family: inherit;
+}
+.active {
+    display: block;
+}
+.disable-scroll {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}

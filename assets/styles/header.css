@@ -1,0 +1,81 @@
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo__text {
+    font-size: 16px;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: bold;
+}
+
+.header__company-desc {
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.header__telephone {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.telephone__text {
+    color: var(--main-black-color);
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.telephone__work-schedule {
+    color: var(--main-black-color);
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.cabinet-text {
+    color: var(--main-black-color);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.header__cabinet {
+    width: 100px;
+    height: 51px;
+    background-color: var(--main-first-color);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.header__cabinet:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+}
+
+.header__cabinet:active {
+    box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.header__cabinet:focus {
+    border: 2px solid var(--main-black-color);
+}
+
+.header {
+    margin-top: 10px;
+}
+
+.header__logo-container {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.header__cabinet {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: inherit;
+}

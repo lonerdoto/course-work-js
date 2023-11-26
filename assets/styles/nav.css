@@ -1,0 +1,25 @@
+.nav {
+    margin-top: 10px;
+    width: 100%;
+    background-color: var(--main-second-color);
+}
+
+.navigation__list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+}
+
+.navigation__item {
+    margin: 22px 0px 22px 0px;
+}
+
+.navigation__item-link {
+    text-decoration: none;
+    color: var(--main-black-color);
+    color: var(--unnamed, #2A2A2A);
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}

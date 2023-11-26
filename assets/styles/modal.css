@@ -1,0 +1,144 @@
+.modal__container {
+    margin: 0 auto;
+    max-width: 720px;
+    position: relative;
+    left: 0;
+    top: 0;
+    background-color: var(--main-white-color);
+    border-radius: 20px;
+}
+
+.modal-login {
+    display: none;
+    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-request {
+    display: none;
+    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.register__form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px 0 20px;
+    border: 5px solid var(--main-second-color);
+    border-radius: 20px;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px 0 20px;
+    border: 5px solid var(--main-second-color);
+    border-radius: 20px;
+    padding: 30px 20px;
+}
+
+.login__container {
+    top: 25%;
+}
+
+.request__form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border: 5px solid var(--main-second-color);
+    border-radius: 20px;
+    padding: 30px 20px;
+}
+
+.request__container {
+    top: -3%;
+}
+
+.form__header {
+    color: var(--main-black-color);
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.form__message {
+    color: var(--main-black-color);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.form__input {
+    background-color: var(--main-white-color);
+    border: 2px solid var(--main-first-color);
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 28px 35px 28px 35px;
+}
+
+.form__input::placeholder {
+    color: var(--main-first-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form__button {
+    background-color: var(--main-second-color);
+    border: none;
+    border-radius: 20px;
+    color: var(--main-white-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 0 15px 0;
+}
+
+.form__question {
+    color: var(--main-black-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.to-form-login {
+    letter-spacing: 2px;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.to-form-register {
+    letter-spacing: 2px;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.textarea__input {
+    height: 200px;
+}
+
+.close-modal-btn {
+    cursor: pointer;
+    background-color: rgb(0, 0, 0, 0);
+    border: none;
+    position: relative;
+    top: 0;
+    left: 95%;
+}
