@@ -1,0 +1,109 @@
+.main {
+    margin-top: 60px;
+}
+
+.main__header {
+    color: var(--main-black-color);
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.requests__table {
+    background: linear-gradient(180deg, #D97C3D 0%, #F6AA3F 100%);
+    padding: 30px 0 30px 0;
+}
+
+.main__table-body {
+    width: 100%;
+    display: table;
+    border-spacing: 0px;
+
+}
+
+
+.table__header tr {
+    color: var(--main-black-color);
+    text-align: center;
+    font-family: 'Montserrat Bold', sans-serif;
+    font-size: 20px;
+
+}
+
+.item td {
+    border-top: 1px solid var(--main-first-color);
+    border-bottom: 1px solid var(--main-first-color);
+    padding: 20px;
+    color: var(--main-black-color);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.table__header tr th {
+    padding: 20px;
+}
+
+.item {
+    text-align: center;
+}
+
+
+.table__container {
+    background-color: var(--main-white-color);
+    border-radius: 10px;
+    border: 1px solid var(--main-first-color);
+}
+
+.header__table-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.table__search-input {
+    padding: 14px 25px;
+    color: var(--main-black-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.table__status-select {
+    padding: 14px 60px;
+    appearance: none;
+    background-image: url('../img/Arrow\ 1.svg');
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: 1.2em auto, 100%;
+    color: var(--unnamed, #2A2A2A);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.search-btn {
+    padding: 11px 84px;
+    background-color: var(--main-first-color);
+    border-radius: 20px;
+    border: none;
+    color: var(--main-white-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.date-label {
+    color: var(--main-black-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    appearance: none;
+}
+.input__date-wrap {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}

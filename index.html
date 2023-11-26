@@ -7,7 +7,7 @@
     <link rel="icon" href="assets/img/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="assets/scripts/main.js" as="script" >
+    <link rel="preload" href="assets/scripts/main.js" as="script">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates:wght@700&display=swap"
         rel="stylesheet">
@@ -25,6 +25,7 @@
     <script defer type="module" src="assets/scripts/main.js"></script>
     <title>Выездная служба по ремонту бытовой техники</title>
 </head>
+
 <body>
     <header class="header">
         <div class="container header__container">
@@ -72,75 +73,77 @@
             </ul>
         </div>
     </nav>
-    <section class="meeting">
-        <div class="container meeting__container">
-            <div class="meeting__left-block">
-                <h1 class="meeting__header">
-                    Профессиональный<br>
-                    ремонт бытовой<br>
-                    техники
-                </h1>
-                <p class="meeting__text">
-                    Быстро. Доступно. Надолго.
-                </p>
-                <button type="button" class="send-request-btn request-button">
-                    Оставить заявку
-                </button>
+    <main class="main">
+        <section class="meeting">
+            <div class="container meeting__container">
+                <div class="meeting__left-block">
+                    <h1 class="meeting__header">
+                        Профессиональный<br>
+                        ремонт бытовой<br>
+                        техники
+                    </h1>
+                    <p class="meeting__text">
+                        Быстро. Доступно. Надолго.
+                    </p>
+                    <button type="button" class="send-request-btn request-button">
+                        Оставить заявку
+                    </button>
+                </div>
+                <div class="meeting__right-block">
+                    <img src="assets/img/meeting man.png" alt="Мужчина в рабочей одежде">
+                </div>
             </div>
-            <div class="meeting__right-block">
-                <img src="assets/img/meeting man.png" alt="Мужчина в рабочей одежде">
+        </section>
+        <section class="services" id="services">
+            <div class="container services__container">
+                <h2 class="services__header">
+                    Наши услуги
+                </h2>
+                <div class="services__cards-container">
+                </div>
             </div>
-        </div>
-    </section>
-    <section class="services" id="services">
-        <div class="container services__container">
-            <h2 class="services__header">
-                Наши услуги
-            </h2>
-            <div class="services__cards-container">
+        </section>
+        <section class="feedback" id="feedback">
+            <div class="container feedback__container">
+                <h2 class="feedback__header">
+                    Наши отзывы
+                </h2>
+                <div class="ism-slider" data-interval="10000" id="my-slider">
+                    <ol>
+                        <li>
+                            <img src="assets/img/feedback-1.png">
+                        </li>
+                        <li>
+                            <img src="assets/img/feedback-2.png">
+                        </li>
+                        <li>
+                            <img src="assets/img/feedback-3.png">
+                        </li>
+                        <li>
+                            <img src="assets/img/feedback-4.png">
+                        </li>
+                        <li>
+                            <img src="assets/img/feedback-5.png">
+                        </li>
+                    </ol>
+                </div>
             </div>
-        </div>
-    </section>
-    <section class="feedback" id="feedback">
-        <div class="container feedback__container">
-            <h2 class="feedback__header">
-                Наши отзывы
-            </h2>
-            <div class="ism-slider" data-interval="10000" id="my-slider">
-                <ol>
-                    <li>
-                        <img src="assets/img/feedback-1.png">
-                    </li>
-                    <li>
-                        <img src="assets/img/feedback-2.png">
-                    </li>
-                    <li>
-                        <img src="assets/img/feedback-3.png">
-                    </li>
-                    <li>
-                        <img src="assets/img/feedback-4.png">
-                    </li>
-                    <li>
-                        <img src="assets/img/feedback-5.png">
-                    </li>
-                </ol>
+        </section>
+        <section class="contacts" id="contacts">
+            <div class="container contacts__container">
+                <img src="assets/img/map.png" alt="Карта">
+                <div class="contacts__content">
+                    <h3 class="contacts__header">
+                        Наши контакты
+                    </h3>
+                    <a class="contacts__telephone" href="tel:+79771891257">+7 (977) 189-12-57</a>
+                    <p class="contacts__schedule">Ежедневно, с 8:00 до 20:00</p>
+                    <p class="contacts__address">Сергиев Посад, с. Шеметово, ул. Центральная, 23Б</p>
+                    <a class="contacts__mail" href="mailto:kotlirov530@mail.ru">kotlirov530@mail.ru</a>
+                </div>
             </div>
-        </div>
-    </section>
-    <section class="contacts" id="contacts">
-        <div class="container contacts__container">
-            <img src="assets/img/map.png" alt="Карта">
-            <div class="contacts__content">
-                <h3 class="contacts__header">
-                    Наши контакты
-                </h3>
-                <a class="contacts__telephone" href="tel:+79771891257">+7 (977) 189-12-57</a>
-                <p class="contacts__schedule">Ежедневно, с 8:00 до 20:00</p>
-                <p class="contacts__address">Сергиев Посад, с. Шеметово, ул. Центральная, 23Б</p>
-                <a class="contacts__mail" href="mailto:kotlirov530@mail.ru">kotlirov530@mail.ru</a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
     <section class="modal-login">
         <button type="button" class="close-modal-btn"><img src="assets/img/cross.svg" alt=""></button>
         <div class="modal__container login__container">
@@ -217,4 +220,5 @@
         </div>
     </footer>
 </body>
+
 </html>

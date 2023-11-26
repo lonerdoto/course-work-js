@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заявки на ремонт</title>
+    <link rel="icon" href="assets/img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="assets/scripts/main.js" as="script">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/header.css">
+    <link rel="stylesheet" href="assets/styles/nav.css">
+    <link rel="stylesheet" href="assets/styles/table.css">
+    <link rel="stylesheet" href="assets/styles/footer.css">
+    <script defer type="module" src="assets/scripts/main.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__logo-container">
+                <img src="assets/img/logo.svg" alt="Логотип компании">
+                <p class="logo__text">РЕМ<br>БЫТ<br>ТЕХ</p>
+            </div>
+            <p class="header__company-desc">
+                Выездная служба по ремонту<br>бытовой техники
+            </p>
+            <div class="header__telephone">
+                <a href="tel:+79771891257" class="telephone__text">
+                    +7 (977) 189-12-57
+                </a>
+                <p class="telephone__work-schedule">
+                    Ежедневно, с 8:00 до 20:00
+                </p>
+            </div>
+            <button type="button" class="header__cabinet">
+                <p class="cabinet-text">
+                    Вход
+                </p>
+                <img src="assets/img/personal area.svg" alt="Иконка личного кабинета">
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container nav__container">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="#services" class="navigation__item-link">
+                        Наши услуги
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#feedback" class="navigation__item-link">
+                        Отзывы
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#contacts" class="navigation__item-link">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main class="main">
+        <h1 class="main__header">
+            Заявки на ремонт
+        </h1>
+        <section class="requests__table">
+                <div class="container header__table-wrapper">
+                    <input class="table__search-input" type="text" name="" id="" placeholder="Поиск по номеру" title="Поиск по номеру заказа">
+                    <select class="table__status-select" name="" id="" title="Статусы">
+                        <option value="all">Все статусы</option>
+                        <option value="ready">Готов</option>
+                        <option value="waiting-for-repair">Ожидает ремонта</option>
+                        <option value="waiting-for-spare-parts">Ожидает запчастей</option>
+                    </select>
+                    <div class="input__date-wrap">
+                        <label class="date-label" for="input">Дата: </label>
+                        <input class="table__search-input" type="date" name="" id="" title="Поиск по дате">
+                    </div>
+
+                    <button class="search-btn" type="button" title="Найти">Найти</button>
+
+
+                </div>
+                <div class="container table__container">
+                    <table class="main__table-body">
+                        <thead class="table__header">
+                            <tr>
+                                <th>№<br>заказа</th>
+                                <th>Дата<br>заказа</th>
+                                <th>ФИО заказчика</th>
+                                <th>Вид техники</th>
+                                <th>Произдведенные работы</th>
+                                <th>Примечание</th>
+                                <th>Статус</th>
+                                <th>Сумма</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody class="table__body">
+                            <tr class="item">
+                                <td class="id">778610446710</td>
+                                <td class="date">23.23.2023</td>
+                                <td class="name">232</td>
+                                <td class="technique">gsdgs</td>
+                                <td class="work-performed ">lorem20</td>
+                                <td class="note">2323</td>
+                                <td class="status ">28600776</td>
+                                <td class="sum">28600776</td>
+                                <td class="edit-icon"><img src="assets/img/akar-icons_edit.svg"></td>
+                                <td class="delete-icon"><img src="assets/img/ant-design_delete-outlined.svg"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__contacts">
+                <div class="footer__telephone">
+                    <p class="footer__telephone-text">
+                        Контактный телефон:
+                    </p>
+                    <a href="tel:+79771891257" class="footer__telephone-link">
+                        +7 (977) 189-12-57
+                    </a>
+                </div>
+                <div class="footer__address">
+                    <p class="footer__address-text">
+                        Фактический адрес:
+                    </p>
+                    <a href="https://yandex.ru/maps/-/CDe8bPym" class="footer__address-link">
+                        Сергиев Посад, с. Шеметово, ул. Центральная, 23Б
+                    </a>
+                </div>
+                <div class="footer__mail">
+                    <p class="footer__mail-text">
+                        Электронная почта:
+                    </p>
+                    <a href="mailto:kotlirov530@mail.ru" class="footer__mail-link">
+                        kotlirov530@mail.ru
+                    </a>
+                </div>
+            </div>
+            <p class="footer__company">
+                ИП Котляров Игорь Сергеевич ИНН: 552705862517 ОГРНИП: 51802500108322
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
