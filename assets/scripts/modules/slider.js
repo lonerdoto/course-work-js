@@ -1,4 +1,4 @@
-(function () {
+    (function () {
     function e(b, c) { this.selector = null; c ? this.nodes = c : "string" == typeof b ? (this.selector = b, this.nodes = document.querySelectorAll(b)) : this.nodes = [b]; this.length = this.nodes.length; this.el = this.nodes[0] } function d(b) { return new e(b) } function k(b, c) {
         function l(a, c, d) {
             a = a || {}; e(); !1 !== c && r(); N = n = f = null; p = -1; C = z = D = E = null; A = !1; B = null; F = !1; q = null; k(a); u(); S(f.transition_type, !0); n.find("#" + b + " .ism-caption").css("visibility", "hidden"); T(); ca(); x(f.play_type); da(); setTimeout(function () { !0 !== d && h() },
