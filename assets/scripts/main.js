@@ -7,9 +7,9 @@ redirectLogo();
 // renderCards();
 // controlModal();
 
-if (document.location.pathname === '/index.html') {
+if (document.location.pathname === '/index.html' || document.location.pathname === '/course-work-js/') {
     if (localStorage.getItem('auth') == "true") {
-        document.location.pathname = "requests.html";
+        document.location.pathname = "/course-work-js/requests.html";
     } else {
         renderCards();
         auth();
