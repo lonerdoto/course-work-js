@@ -19,7 +19,7 @@ const init = async () => {
 	filter();
 }
 
-if (document.location.pathname == 'course-work-js') {
+if (document.location.pathname == '/course-work-js/') {
     if (localStorage.getItem('auth') == "true") {
         document.location.pathname = "course-work-js/requests.html";
         init();
