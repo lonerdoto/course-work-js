@@ -2,7 +2,7 @@
 
 
 import { popup } from "../main.js";
-import { getData, createGoods, deleteGoods, editGoods, getGoods } from "../modules/getServerData.js";
+import { getData, createGoods, editGoods, getGoods } from "../modules/getServerData.js";
 import { closeModal, openModal, controlModal } from "./modal.js";
 
 const itemList = document.querySelector(".tbody");

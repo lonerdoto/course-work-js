@@ -2,7 +2,7 @@
 
 
 import { getData } from "../modules/getServerData.js";
-import { deleteFunction, editItemsFunction } from "./starting.js";
+import { editItemsFunction } from "./starting.js";
 import { createItemRow } from "./addEl.js";
 
 

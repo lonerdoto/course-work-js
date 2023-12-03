@@ -1,10 +1,9 @@
 import { renderCards } from "./modules/cards.js";
 import { redirectLogo } from "./modules/logo-redirect.js";
 import { auth, controlModal } from "./modules/modal.js";
-import { deleteGoods, getData } from "./modules/getServerData.js";
-import {getStorage} from "./modules/localStorage.js";
+import { getData } from "./modules/getServerData.js";
 import {renderItems} from "../scripts/modules/render.js";
-import {popupControl, formControl, deleteFunction, editItemsFunction} from "./modules/starting.js";
+import { formControl} from "./modules/starting.js";
 import {filter} from "../scripts/modules/filter.js";
 
 let addProductBtn = document.querySelector(".add-product-btn");
