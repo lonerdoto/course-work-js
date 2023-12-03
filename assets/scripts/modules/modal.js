@@ -106,7 +106,7 @@ export const auth = () => {
             return;
         }
 
-        document.location.pathname = "/requests.html"
+        document.location.pathname = "/course-work-js/requests.html"
         localStorage.setItem('auth', 'true')
         
         loginInput.value = ""
