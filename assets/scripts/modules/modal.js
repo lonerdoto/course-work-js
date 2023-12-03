@@ -40,7 +40,7 @@ export const controlModal = () => {
     let isModalOpened = false;
     if (localStorage.getItem('auth') == "true") {
         cabinetBtn.addEventListener('click', () => {
-            document.location.pathname = "/index.html"
+            document.location.pathname = "course-work-js"
             localStorage.setItem('auth', "false");
         })
         editBtn.forEach(e => {
@@ -98,23 +98,17 @@ export const auth = () => {
             invalidLogin.style.display = "none";
             invalidPass.style.display = "none";
         }
-        if (login !== adminLogin) {
+        if (login !== adminLogin && pass !== adminPass) {
             invalidLogin.style.display = "block";
             formBtn.style.cursor = "default"
             formBtn.disabled = "true"
             setTimeout(hideInvalid, 3000);
-        }
-        if (pass !== adminPass) {
-            formBtn.style.cursor = "default"
-            formBtn.disabled = "true"
-            invalidPass.style.display = "block";
-            setTimeout(hideInvalid, 3000);
-        }
-        if (pass === adminPass && login === adminLogin) {
-            document.location.pathname = "/requests.html"
-            localStorage.setItem('auth', 'true')
+            return;
         }
 
+        document.location.pathname = "/requests.html"
+        localStorage.setItem('auth', 'true')
+        
         loginInput.value = ""
         passwordInput.value = ""
         
