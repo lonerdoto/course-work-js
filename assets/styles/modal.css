@@ -52,7 +52,13 @@
     padding: 30px 20px;
 }
 
+<<<<<<< HEAD
 
+=======
+.login__container {
+    top: 5%;
+}
+>>>>>>> 66a1a3dd5ffec936e4cb4c53684fe5c5c38e0eeb
 
 .request__form {
     display: flex;
@@ -151,6 +157,7 @@
 }
 .modal-sended-request {
     display: none;
+<<<<<<< HEAD
     overflow-y: auto;
     position: fixed;
     left: 0;
@@ -177,3 +184,6 @@
     border-radius: 20px;
     padding: 30px 20px;
 }
+=======
+}
+>>>>>>> 66a1a3dd5ffec936e4cb4c53684fe5c5c38e0eeb
