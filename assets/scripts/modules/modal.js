@@ -38,7 +38,7 @@ export const controlModal = () => {
     let isModalOpened = false;
     if (localStorage.getItem('auth') == "true") {
         cabinetBtn.addEventListener('click', () => {
-            document.location.href = "course-work-js";
+            document.location.pathname = "course-work-js";
             localStorage.setItem('auth', "false");
         })
         editBtn.forEach(e => {
