@@ -22,14 +22,15 @@ const init = async () => {
 
 if (document.location.href.includes('course-work-js')) {
     if (localStorage.getItem('auth') == "true") {
-        document.location.pathname = "/course-work-js/requests.html";
+        document.location.pathname = "course-work-js/requests.html";
         init();
+        return;
     } else {
         formControl(form, data);
         renderCards();
         auth();
     }
-}  else if (document.location.href.includes('/course-work-js/access-denied.html')) {
+}  else if (document.location.href.includes('course-work-js/access-denied.html')) {
     auth();
 } else {
     init();
