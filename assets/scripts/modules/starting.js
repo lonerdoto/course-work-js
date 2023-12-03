@@ -87,7 +87,6 @@ function ValidPhone(myPhone) {
 }
 
 const formControl = (form, data) => {
-	console.log(form)
 	const form_name = document.querySelector('.form__header');
 	const formButton = document.querySelector('.request__form-btn')
 	const numberInput = document.querySelector('.number__input')
@@ -111,7 +110,6 @@ const formControl = (form, data) => {
 			const formData = new FormData(e.target);
 			const newItem = Object.fromEntries(formData);
 			if (!ValidPhone(numberInput.value)) {
-				console.log('cyka');
 				invalidTel.style.display = "block";
 				numberInput.style.border = "3px solid red"
 				formButton.style.cursor = "default";
@@ -135,7 +133,6 @@ const formControl = (form, data) => {
 				await createGoods(JSON.stringify(itemJson));
 				e.target.reset();
 			}, 3000);
-			console.log(itemJson);
 
 		})
 	} else {
@@ -219,7 +216,6 @@ const editItemsFunction = () => {
 		icon.addEventListener("click", async e => {
 			const target = e.target;
 			let item = await getGoods(target.closest(".item").querySelector('.id').innerHTML);
-			console.log(item);
 			e.preventDefault();
 			e.stopPropagation();
 			statusInput.style.display = 'flex';

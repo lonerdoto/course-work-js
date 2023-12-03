@@ -39,7 +39,6 @@ const editGoods = async (id, data) => {
         method: "PATCH",
         body: data
     })
-    console.log(data)
 
     const result = await res.json();
 

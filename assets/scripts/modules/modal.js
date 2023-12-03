@@ -3,7 +3,6 @@ export const closeModal = () => {
     const body = document.querySelector('body');
     const modals = document.querySelectorAll('.modal')
     body.classList.remove("disable-scroll");
-    console.log('close');
     modals.forEach(e => {
         e.style.display = "none";
     });
@@ -18,7 +17,6 @@ export const openModal = (type = null) => {
     const sendedRequestModal = document.querySelector('.modal-sended-request')
     const editModal = document.querySelector('.modal-edit')
     body.classList.add("disable-scroll");
-    console.log('open');
     if (type === 'req') {
         requestModal.style.display = "block";
     } else if (type === 'sended-req') {
@@ -40,7 +38,7 @@ export const controlModal = () => {
     let isModalOpened = false;
     if (localStorage.getItem('auth') == "true") {
         cabinetBtn.addEventListener('click', () => {
-            document.location.pathname = "course-work-js"
+            document.location.href = "course-work-js";
             localStorage.setItem('auth', "false");
         })
         editBtn.forEach(e => {

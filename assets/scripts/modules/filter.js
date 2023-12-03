@@ -6,9 +6,7 @@ const filter = () => {
     const placeHolder = document.getElementById("input");
     placeHolder.oninput = async (ev) => {
         let value = ev.target.value.trim();
-        console.log(value)
         const data = await getData();
-        console.log(data)
 
         let sort_data = [];
         

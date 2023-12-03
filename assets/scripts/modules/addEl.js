@@ -4,7 +4,6 @@
 const itemList = document.querySelector(".tbody");
 const preloader = document.querySelector('.services__preloader')
 const createItemRow = (item) => {
-	console.log(item);
 	const tr = document.createElement("tr");
 	tr.classList.add("item");
 	const id = document.createElement("td");

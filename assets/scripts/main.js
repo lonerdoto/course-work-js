@@ -13,10 +13,6 @@ let closeBtn = document.querySelector(".pop-up__close");
 const form = document.querySelector(".form ");
 const data = await getData();
 
-
-
-
-
 const init = async () => {
 	popupControl(addProductBtn, closeBtn, popup);
 	await renderItems();
@@ -24,9 +20,7 @@ const init = async () => {
 	filter();
 }
 
-
-
-if (document.location.pathname === '/index.html' || document.location.pathname === '/course-work-js/') {
+if (document.location.href.includes('course-work-js')) {
     if (localStorage.getItem('auth') == "true") {
         document.location.pathname = "/course-work-js/requests.html";
         init();
