@@ -102,15 +102,18 @@ export const auth = () => {
             invalidLogin.style.display = "block";
             formBtn.style.cursor = "default"
             formBtn.disabled = "true"
+            loginInput.value = ""
+            passwordInput.value = ""
             setTimeout(hideInvalid, 3000);
             return;
         }
-
-        document.location.pathname = "/course-work-js/requests.html"
-        localStorage.setItem('auth', 'true')
+        if (login === adminLogin && pass === adminPass) {
+            document.location.pathname = "/course-work-js/requests.html"
+            localStorage.setItem('auth', 'true')
         
-        loginInput.value = ""
-        passwordInput.value = ""
+        }
+        
+        
         
     }
     loginForm.addEventListener('submit', checkValues)
