@@ -8,16 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="assets/scripts/main.js" as="script">
+    <link rel="preload" href="assets/img/meeting man.png" as="image">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/preloader.css">
+    <link rel="stylesheet" href="assets/styles/slider.css">
     <link rel="stylesheet" href="assets/styles/header.css">
     <link rel="stylesheet" href="assets/styles/nav.css">
     <link rel="stylesheet" href="assets/styles/meeting.css">
     <link rel="stylesheet" href="assets/styles/services.css">
     <link rel="stylesheet" href="assets/styles/feedback.css">
-    <link rel="stylesheet" href="assets/styles/slider.css">
     <link rel="stylesheet" href="assets/styles/contacs.css">
     <link rel="stylesheet" href="assets/styles/footer.css">
     <link rel="stylesheet" href="assets/styles/modal.css">
@@ -25,6 +27,7 @@
     <script defer type="module" src="assets/scripts/main.js"></script>
     <title>Выездная служба по ремонту бытовой техники</title>
 </head>
+
 
 <body>
     <header class="header">
@@ -99,6 +102,13 @@
                 <h2 class="services__header">
                     Наши услуги
                 </h2>
+                <div class="preloader services__preloader">
+                    <div class="preloader__row">
+                        <div class="preloader__item"></div>
+                        <div class="preloader__item"></div>
+                    </div>
+
+                </div>
                 <div class="services__cards-container">
                 </div>
             </div>
@@ -108,6 +118,12 @@
                 <h2 class="feedback__header">
                     Наши отзывы
                 </h2>
+                <div class="preloader feedback__preloader">
+                    <div class="preloader__row">
+                        <div class="preloader__item"></div>
+                        <div class="preloader__item"></div>
+                    </div>
+                </div>
                 <div class="ism-slider" data-interval="10000" id="my-slider">
                     <ol>
                         <li>
@@ -144,16 +160,46 @@
             </div>
         </section>
     </main>
-    <section class="modal-login">
-        <button type="button" class="close-modal-btn"><img src="assets/img/cross.svg" alt=""></button>
+    <section class="modal modal-request">
+        <div class="modal__container request__container">
+            <form class="request__form form" method="post">
+                <h2 class="form__header">
+                    Подача заявки на ремонт
+                </h2>
+                <p class="form__message">
+                    Пожалуйста, заполните форму чтобы мы могли помочь Вам решить Вашу проблему.<br>
+                    После заполнения заявки наш менеджер свяжется с Вами в течение часа.
+                </p>
+                <div class="modal__invalid-tel">
+                    <p class="invalid-text invalid-tel-text"> Неверно набран номер телефона</p>
+                </div>
+                <div class="modal__invalid-name">
+                    <p class="invalid-text invalid-name-text"> Ваше ФИО не в корректном формате</p>
+                </div>
+                <input class="form__input number__input" type="tel" name="telnumber" required
+                    placeholder="Номер телефона (формат: +7 (***) ***-**-**)">
+                <input class="form__input fio__input" type="name" name="fio" required
+                    placeholder="Ваше ФИО (Иванов Иван Иванович), отчество при наличии">
+                <input class="form__input technique__input" type="text" name="technique" required
+                    placeholder="Вид техники (например, холодильник)">
+                <textarea class="form__input textarea__input" type="text" name="malfunction" required
+                    placeholder="Опишите неисправность (не включается, сильно шумит и т.п.)"></textarea>
+                <button type="submit" class="form__button request__form-btn">
+                    Отправить заявку
+                </button>
+
+            </form>
+        </div>
+    </section>
+    <section class="modal modal-login">
         <div class="modal__container login__container">
-            <form class="login__form" action="" method="get">
+            <form class="login__form form" action="" method="get">
                 <h2 class="form__header">
                     Вход администратора
                 </h2>
-                <input class="form__input mail__input" type="text" name="login"  placeholder="Логин" id="login">
-                <input class="form__input password__input" type="password" name="password" 
-                    placeholder="Пароль" id="password">
+                <input class="form__input mail__input" type="text" name="login" placeholder="Логин" id="login">
+                <input class="form__input password__input" type="password" name="password" placeholder="Пароль"
+                    id="password">
                 <button type="submit" class="form__button">
                     Вход
                 </button>
@@ -166,30 +212,11 @@
             </form>
         </div>
     </section>
-    <section class="modal-request">
-        <button type="button" class="close-modal-btn" title="Закрыть форму"><img src="assets/img/cross.svg"
-                alt=""></button>
-        <div class="modal__container request__container">
-            <form class="request__form" action="" method="post">
-                <h2 class="form__header">
-                    Подача заявки на ремонт
-                </h2>
-                <p class="form__message">
-                    Пожалуйста, заполните форму чтобы мы могли помочь Вам решить Вашу проблему.<br>
-                    После заполнения заявки наш менеджер свяжется с Вами в течение часа.
-                </p>
-                <input class="form__input number__input" type="number" name="tel-number" required
-                    placeholder="Номер телефона (формат: +7 (***) ***-**-**)">
-                <input class="form__input fio__input" type="name" name="fio" required
-                    placeholder="Ваше ФИО (Иванов Иван Иванович)">
-                <input class="form__input technique__input" type="text" name="technique" required
-                    placeholder="Вид техники (например, холодильник)">
-                <textarea class="form__input textarea__input" type="text" name="malfunction" required
-                    placeholder="Опишите неисправность (не включается, сильно шумит и т.п.)"></textarea>
-                <button type="submit" class="form__button">
-                    Отправить заявку
-                </button>
-            </form>
+
+
+    <section class="modal modal-sended-request">
+        <div class="modal__container sended-request__container">
+            <h2 class="sended__request">Ваша заявка успешно принята!</h2>
         </div>
     </section>
     <footer class="footer">

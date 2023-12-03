@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/header.css">
     <link rel="stylesheet" href="assets/styles/nav.css">
+    <link rel="stylesheet" href="assets/styles/modal.css">
     <link rel="stylesheet" href="assets/styles/footer.css">
     <script defer type="module" src="assets/scripts/main.js"></script>
 </head>
@@ -38,9 +39,6 @@
                 </p>
             </div>
             <div class="cabinet__wrapper">
-                <p class="cabinet-text">
-                    Admin
-                </p>
                 <button type="button" class="header__cabinet">
                     <p class="cabinet-text">
                         Вход
@@ -56,17 +54,17 @@
         <div class="container nav__container">
             <ul class="navigation__list">
                 <li class="navigation__item">
-                    <a href="#services" class="navigation__item-link">
+                    <a href="index.html#services" class="navigation__item-link">
                         Наши услуги
                     </a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#feedback" class="navigation__item-link">
+                    <a href="index.html#feedback" class="navigation__item-link">
                         Отзывы
                     </a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#contacts" class="navigation__item-link">
+                    <a href="index.html#contacts" class="navigation__item-link">
                         Контакты
                     </a>
                 </li>
@@ -76,8 +74,29 @@
     <main class="main">
         <div class="container">
             <h1 class="access-denied-header">Доступ отклонен</h1>
-            <a class="access-denied-text" href="/course-work-js/">Вернуться на главную</a>
+            <a class="access-denied-text" href="course-work-js">Вернуться на главную</a>
         </div>
+        <section class="modal-login">
+            <div class="modal__container login__container">
+                <form class="login__form modal " action="" method="get">
+                    <h2 class="form__header">
+                        Вход администратора
+                    </h2>
+                    <input class="form__input mail__input" type="text" name="login"  placeholder="Логин" id="login">
+                    <input class="form__input password__input" type="password" name="password" 
+                        placeholder="Пароль" id="password">
+                    <button type="submit" class="form__button">
+                        Вход
+                    </button>
+                    <div class="modal__invalid-login">
+                        <p class="invalid-text invalid-login-text"> Неверный логин</p>
+                    </div>
+                    <div class="modal__invalid-pass">
+                        <p class="invalid-text invalid-pass-text"> Неверный пароль</p>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">

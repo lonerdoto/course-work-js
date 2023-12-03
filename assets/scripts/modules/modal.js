@@ -1,32 +1,78 @@
-export const controlModal = () => {
+
+export const closeModal = () => {
     const body = document.querySelector('body');
-    const sendRequestBtns = document.querySelectorAll('.request-button');
-    const requestModal = document.querySelector('.modal-request')
+    const modals = document.querySelectorAll('.modal')
+    body.classList.remove("disable-scroll");
+    console.log('close');
+    modals.forEach(e => {
+        e.style.display = "none";
+    });
+    
+}
+
+
+export const openModal = (type = null) => {
+    const body = document.querySelector('body');
     const loginModal = document.querySelector('.modal-login')
-    const closeBtns = document.querySelectorAll('.close-modal-btn')
+    const requestModal = document.querySelector('.modal-request')
+    const sendedRequestModal = document.querySelector('.modal-sended-request')
+    const editModal = document.querySelector('.modal-edit')
+    body.classList.add("disable-scroll");
+    console.log('open');
+    if (type === 'req') {
+        requestModal.style.display = "block";
+    } else if (type === 'sended-req') {
+        sendedRequestModal.style.display = "block";
+    } else if (type === 'edit-req') {
+        editModal.style.display = "block";
+        
+    } else {
+        loginModal.style.display = "block";
+    }
+
+}
+
+
+export const controlModal = () => {
+    const sendRequestBtns = document.querySelectorAll('.request-button');
     const cabinetBtn = document.querySelector('.header__cabinet')
+    const editBtn = document.querySelectorAll('.editIcon')
+    let isModalOpened = false;
     if (localStorage.getItem('auth') == "true") {
         cabinetBtn.addEventListener('click', () => {
-            document.location.pathname = "/course-work-js/"
+            document.location.pathname = "/index.html"
             localStorage.setItem('auth', "false");
         })
+        editBtn.forEach(e => {
+            e.addEventListener('click', () => {
+                openModal('edit-req');
+                isModalOpened = true;
+            })
+        });
     } else {
         cabinetBtn.addEventListener('click', () => {
-            loginModal.style.display = "block";
-            body.classList.add("disable-scroll");
+            openModal();
+            isModalOpened = true;
         })
     }
-    closeBtns.forEach(e => {
-        e.addEventListener('click', () => {
-            requestModal.style.display = "none";
-            loginModal.style.display = "none";
-            body.classList.remove("disable-scroll");
-        })
+    document.addEventListener('click', function (e) {
+        if (!isModalOpened) {
+            return;
+        }
+        if (!e.target.closest("form") && (!e.target.closest("button"))) {
+            closeModal();
+        }
     });
+    document.addEventListener('keydown', function (e) {
+        if(e.keyCode === 27) {
+            closeModal();
+        }
+    }); 
+
     sendRequestBtns.forEach(e => {
         e.addEventListener('click', () => {
-            requestModal.style.display = "block";
-            body.classList.add("disable-scroll");
+            openModal('req')
+            isModalOpened = true;
         })
     });
 }
@@ -65,7 +111,7 @@ export const auth = () => {
             setTimeout(hideInvalid, 3000);
         }
         if (pass === adminPass && login === adminLogin) {
-            document.location.pathname = "/course-work-js/requests.html"
+            document.location.pathname = "/requests.html"
             localStorage.setItem('auth', 'true')
         }
 

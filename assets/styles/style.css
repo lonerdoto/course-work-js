@@ -43,6 +43,7 @@ textarea {
 .active {
     display: block;
 }
+
 .disable-scroll {
     position: relative;
     overflow: hidden;

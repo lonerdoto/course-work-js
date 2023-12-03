@@ -98,6 +98,7 @@
     text-decoration: none;
     color: var(--main-black-color);
     transition: color .2s;
+    margin: 20px;
 }
 .access-denied-text:hover {
     color: var(--main-second-color);

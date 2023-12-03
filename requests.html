@@ -8,16 +8,16 @@
     <link rel="icon" href="assets/img/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="assets/scripts/main.js" as="script">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/modal.css">
+    <link rel="stylesheet" href="assets/styles/preloader.css">
     <link rel="stylesheet" href="assets/styles/header.css">
     <link rel="stylesheet" href="assets/styles/nav.css">
     <link rel="stylesheet" href="assets/styles/table.css">
     <link rel="stylesheet" href="assets/styles/footer.css">
-    <script defer type="module" src="assets/scripts/main.js"></script>
 </head>
 
 <body>
@@ -54,68 +54,124 @@
 
     <script>
         if (localStorage.getItem('auth') == "false") {
-            document.location.pathname = "/course-work-js/access-denied.html";
+            document.location.pathname = "/access-denied.html";
         }
     </script>
     <main class="main">
         <h1 class="main__header">
             Заявки на ремонт
         </h1>
-        <section class="requests__table">
-            <div class="container header__table-wrapper">
-                <input class="table__search-input" type="text" name="" id="" placeholder="Поиск по номеру"
-                    title="Поиск по номеру заказа">
-                <select class="table__status-select" name="" id="" title="Статусы">
-                    <option value="all">Все статусы</option>
-                    <option value="ready">Готов</option>
-                    <option value="waiting-for-repair">Ожидает ремонта</option>
-                    <option value="waiting-for-spare-parts">Ожидает запчастей</option>
-                </select>
-                <div class="input__date-wrap">
-                    <label class="date-label" for="input">Дата: </label>
-                    <input class="table__search-input" type="date" name="" id="" title="Поиск по дате">
+
+        <section class="main__table">
+            <div class="table-container">
+                <div class="main__table-header">
+                    <div class="main__table-header-search">
+                        <div class="container header__table-wrapper">
+                            <div class="main__table-header-search-container">
+                                <input class="table-search-input" placeholder="Поиск по номеру" id="input">
+                            </div>
+                            <select class="table__status-select" name="" id="" title="Статусы">
+                                <option value="all">Все статусы</option>
+                                <option value="ready">Готов</option>
+                                <option value="waiting-for-repair">Ожидает ремонта</option>
+                                <option value="waiting-for-spare-parts">Ожидает запчастей</option>
+                            </select>
+                            <div class="input__date-wrap">
+                                <label class="date-label" for="input">Дата: </label>
+                                <input class="table__search-input" type="date" name="" id="" title="Поиск по дате">
+                            </div>
+                            <!-- <button class="search-btn" type="button" title="Найти">Найти</button> -->
+                        </div>
+                    </div>
                 </div>
-
-                <button class="search-btn" type="button" title="Найти">Найти</button>
-
-
-            </div>
-            <div class="container table__container">
                 <table class="main__table-body">
-                    <thead class="table__header">
+                    <thead>
                         <tr>
                             <th>№<br>заказа</th>
                             <th>Дата<br>заказа</th>
                             <th>ФИО заказчика</th>
                             <th>Вид техники</th>
-                            <th>Произдведенные работы</th>
-                            <th>Примечание</th>
+                            <th>Описание проблемы</th>
+                            <th>Номер телефона</th>
                             <th>Статус</th>
                             <th>Сумма</th>
                             <th></th>
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody class="table__body">
-                        <tr class="item">
-                            <td class="id">778610446710</td>
-                            <td class="date">23.23.2023</td>
-                            <td class="name">232</td>
-                            <td class="technique">gsdgs</td>
-                            <td class="work-performed ">lorem20</td>
-                            <td class="note">2323</td>
-                            <td class="status ">28600776</td>
-                            <td class="sum">28600776</td>
-                            <td class="edit-icon"><img src="assets/img/akar-icons_edit.svg"></td>
-                            <td class="delete-icon"><img src="assets/img/ant-design_delete-outlined.svg"></td>
-                        </tr>
+                    <tbody class="tbody">
                     </tbody>
+    
                 </table>
+                <div class="main__table-footer">
+                    <div class="preloader services__preloader">
+                        <div class="preloader__row">
+                            <div class="preloader__item"></div>
+                            <div class="preloader__item"></div>
+                        </div>
+                    </div>
+                    <div class="page-btns">
+                        <img class="left-btn" src="assets/img/Vector (2).svg">
+                        <div class="page-number">
+                            <p class="page-number-text">1-10 of 276</p>
+                        </div>
+                        <img class="right-btn" src="assets/img/Vector (1).svg">
+                    </div>
+                    <div class="footer-items">
+    
+                        <div class="page-setting">
+                            <p class="page-setting-text">Показывать на странице:
+                            </p>
+                            <select class="page__select" name="items_view" id="items_view">
+                                <option value="el10">5</option>
+                                <option value="el10" selected>10</option>
+                                <option value="el15">15</option>
+                                <option value="el20">20</option>
+                            </select>
+                        </div>
+    
+                    </div>
+                </div>
             </div>
+            
+
         </section>
     </main>
+            <section class="modal modal-edit">
+            <div class="modal__container login__container">
+                <form class="edit__form form" action="" method="post">
+                    <h2 class="form__header">
+                        pop-up title
+                    </h2>
+                    <div class="status-input">
+                        <label class="status-label">Статус заявки</label>
+                        <textarea class="form__input textarea-status" name="status"
+                        oninput="deleteSpace(this)"></textarea>
+                    </div>
+                    <div class="sum-input">
+                        <label class="sum-label">Сумма</label>
+                        <textarea class="form__input textarea-sum" name="sum"
+                        oninput="deleteSpace(this)"></textarea>
+                    </div>
+                    <button type="submit" class="form__button footer__btn">
+                        Вход
+                    </button>
 
 
+                </form>
+            </div>
+        </section>
+                <!-- </form>
+            </div>
+        </div>
+
+    </div> -->
+
+    <div class="pop-up2">
+        <img class="pop-up__close" src="assets/img/Group 85.svg">
+        <div class="pop-up-container">
+        </div>
+    </div>
     <footer class="footer">
         <div class="container footer__container">
             <div class="footer__contacts">
@@ -149,6 +205,18 @@
             </p>
         </div>
     </footer>
+    <script>
+        const toNumber = e => {
+            const value = e.value;
+            e.value = value.replace(/\D/g, '');
+        };
+        const deleteSpace = e => {
+            if (e.value.charAt(0) == ' ') {
+                e.value = "";
+            }
+        }
+    </script>
+    <script src="assets/scripts/main.js" type="module" defer></script>
 </body>
 
 </html>

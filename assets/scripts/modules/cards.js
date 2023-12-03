@@ -1,5 +1,6 @@
 export const renderCards = () => {
     const cardsSection = document.querySelector(".services__cards-container");
+    const preloader = document.querySelector('.services__preloader')
     const cardsInfo = [
             {"type": "холодильников",
             "img_src": "assets/img/fridge.png",
@@ -104,6 +105,7 @@ export const renderCards = () => {
                 </div>
             </div>
             `
+            preloader.style.display = "none"
             cardsSection.appendChild(card)
     })
 }
