@@ -30,8 +30,6 @@ if (document.location.pathname == 'course-work-js') {
     }
 }  else if (document.location.href == 'course-work-js/access-denied.html') {
     auth();
-} else {
-    init();
 }
 
 controlModal();
